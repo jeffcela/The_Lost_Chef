@@ -16,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/jeffcela/The_Lost_Chef/issues"
   },
-  "homepage": "https://github.com/jeffcela/The_Lost_Chef#readme"
+  "homepage": "https://github.com/jeffcela/The_Lost_Chef#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.1.2"
+  }
 }
