@@ -1,0 +1,20 @@
+{
+  "name": "the_lost_chef",
+  "version": "1.0.0",
+  "description": "The Lost Chef is a web application to help the novice chef navigate the kitchen.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffcela/The_Lost_Chef.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffcela/The_Lost_Chef/issues"
+  },
+  "homepage": "https://github.com/jeffcela/The_Lost_Chef#readme"
+}
