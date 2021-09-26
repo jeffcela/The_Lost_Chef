@@ -2,6 +2,9 @@
 /* font-family: 'Bodoni Moda', serif;
 font-family: 'Poppins', sans-serif; */
 
+
+
+
 /* Coolors Exported Palette - https://coolors.co/e9bd67-5f8369-faf7f1-5c5f5f-b55008-edce87-ffffff-1e1e1e */
 
 :root
@@ -39,6 +42,7 @@ nav {
   background-color: ;
 }
 
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -70,14 +74,13 @@ h5 {
 }
 
 .parallax-container {
-  min-height: 380px;
+  /* min-height: 380px; */
   line-height: 0rem;
   height: 850px;
   display: flex;
-  flex-flow: column;
+  /* flex-flow: column; */
   align-items: center;
   justify-content: center;
-  
 }
 
   .parallax-container .container {
@@ -91,6 +94,23 @@ h5 {
     /* flex-direction: center;*/
     
   }
+
+
+
+
+
+#about {
+  background-color: rgba(95, 131, 105, 1);
+  color: rgba(233, 189, 103, 1);
+}
+
+#startcooking {
+  background-color: rgba(95, 131, 105, 1);
+  color: rgba(233, 189, 103, 1);
+}
+
+
+
 
 
 @media only screen and (max-width : 992px) {
