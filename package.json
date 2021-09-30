@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "handlebars": "^4.7.7",
+    "heroku": "^7.59.0",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   },
