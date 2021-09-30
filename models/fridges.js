@@ -12,10 +12,6 @@ fridges.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            references: {
-                model: 'users_fridges',
-                key: 'fridge_id'
-            }
         },
         fridge_name: {
             type: DataTypes.STRING,

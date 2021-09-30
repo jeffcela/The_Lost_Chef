@@ -12,10 +12,6 @@ users.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            references: {
-                model: 'users_fridges',
-                key: 'user_id'
-            }
         },
         email: {
             type: DataTypes.STRING,

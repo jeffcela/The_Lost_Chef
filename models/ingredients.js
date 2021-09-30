@@ -3,12 +3,12 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection.js');
 
-class api_id extends Model {}
+class ingredients extends Model {}
 
-api_id.init(
+ingredients.init(
     {
         // define columns
-        api_id: {
+        ingredients_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true
@@ -20,8 +20,8 @@ api_id.init(
         // Set to false to remove `created_at` and `updated_at` fields
         freezeTableName: true,
         underscored: true,
-        modelName: 'api_id',
+        modelName: 'ingredients',
       }
 );
 
-module.exports = api_id;
+module.exports = ingredients;

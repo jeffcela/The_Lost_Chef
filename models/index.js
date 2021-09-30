@@ -12,7 +12,7 @@ fridges.belongsTo(users, {
 //ingredient belongs to fridge_ingredient
 ingredients.belongsToMany(fridges, {
     through: "fridge_ingredients",
-    foreignKey: 'ingredient_id',
+    foreignKey: 'ingredients_id',
 })
 
 fridges.belongsToMany(ingredients,{
