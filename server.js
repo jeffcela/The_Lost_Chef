@@ -1,18 +1,46 @@
-const path = require('path');
 const express = require('express');
-const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const hbs = exphbs.create({ helpers });
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
-app.use(routes);
-// sequelize.sync({ force: false }).then(() => {
-//     app.listen(PORT, () => console.log('Now listening'));
-//   });
+app.engine('hbs', exphbs({
+    defaultLayout: 'main',
+    extname: '.hbs',
+    helpers: {
+        getShortComment(comment) {
+            if (comment.length < 64) {
+                return comment;
+            }
+
+            return comment.substring(0, 64) + '...';
+        }
+    }
+}));
+
+app.set('view engine', 'hbs');
+
+app.get('/', function (req, res) {
+    res.render('home', {
+        recipes: [
+            {
+                recipeauthor: 'Recipe Author',
+                image: 'https://picsum.photos/500/500',
+                comments: [
+                    'This is the first comment',
+                    'This is the second comment',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec fermentum ligula. Sed vitae erat lectus.'
+                ]
+            }, 
+            {
+                author: 'Recipe Author',
+                image: 'https://picsum.photos/500/500?2',
+                comments: [
+                ]
+            }
+        ]
+    });
+});
+
+app.listen(3000, () => {
+    console.log('The web server has started on port 3000');
+});
