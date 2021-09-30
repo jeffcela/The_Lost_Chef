@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS fridge_db;
+CREATE DATABASE fridge_db;
+
+
