@@ -1,5 +1,10 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const {fridges,users, ingredients,fridgeIngredients} = require('./models');
+
+const sequelize = require('./config/connection');
+
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -41,6 +46,9 @@ app.get('/', function (req, res) {
     });
 });
 
-app.listen(3000, () => {
-    console.log('The web server has started on port 3000');
-});
+// app.listen(3000, () => {
+//     console.log('The web server has started on port 3000');
+// });
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+  });
