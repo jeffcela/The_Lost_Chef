@@ -1,41 +1,48 @@
 const router = require('express').router();
-const { buildMyRecipe, favoriteRecpies, userfridge } = require('../models');
 const withAuth = require();
 
 router.get('/', async (req,res) => {
     try {
-        const fridgesData = await Fridges.findAll({
-            include: [
-                {
-                    model: userfridge,
-                    attributes: ['name'],
-                }
-            ]
-        });
 
         res.render('homepage', {
-            fridges,
-            logged_in: req.session.logged_in
+            logged_in: true,
         });
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
+router.get('/build-my-recipes', async (req,res) => {
+    try {
 
-router.get('/fridges/:id', async (req, res) => {
-    try {}
+        res.render('buildMyRecipes', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
 });
 
+router.get('/favorite-recipes', async (req,res) => {
+    try {
 
-router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/profile');
-      return;
+        res.render('favoriteRecipes', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
     }
-  
-    res.render('login');
-  });
-  
+});
+
+router.get('/user-fridges', async (req,res) => {
+    try {
+
+        res.render('userFridges', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 module.exports = router;
