@@ -12,6 +12,7 @@ users.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true
         },
         email: {
             type: DataTypes.STRING,

@@ -11,7 +11,16 @@ ingredients.init(
         ingredients_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
+        },
+        ingredients_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        ingredients_api_id: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
@@ -21,6 +30,7 @@ ingredients.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'ingredients',
+        timestamps: false
       }
 );
 

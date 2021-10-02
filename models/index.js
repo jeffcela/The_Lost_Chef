@@ -10,15 +10,23 @@ fridges.belongsTo(users, {
 });
 
 //ingredient belongs to fridge_ingredient
-ingredients.belongsToMany(fridges, {
-    through: "fridge_ingredients",
-    foreignKey: 'ingredients_id',
-})
+// ingredients.belongsToMany(fridges, {
+//     through: "fridge_ingredients",
+//     foreignKey: 'ingredients_id',
+// })
 
-fridges.belongsToMany(ingredients,{
-    through: "fridge_ingredients",
-    foreignKey: 'fridge_id',
-})
+// fridges.belongsToMany(ingredients,{
+//     through: "fridge_ingredients",
+//     foreignKey: 'fridge_id',
+// })
+
+fridgeIngredients.hasOne(ingredients, {
+    foreignKey: 'ingredients_id'
+});
+
+fridgeIngredients.hasOne(fridges, {
+    foreignKey: 'fridge_id'
+});
 
 module.exports = {
     fridges,
