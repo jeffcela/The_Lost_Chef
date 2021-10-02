@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const {fridges,users, ingredients,fridgeIngredients} = require('./models');
-
+const controllers = require("./controllers");
 const sequelize = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
@@ -23,7 +23,7 @@ app.engine('hbs', exphbs({
 }));
 
 app.set('view engine', 'hbs');
-
+app.use(controllers);
 app.get('/', function (req, res) {
     res.render('home', {
         recipes: [
