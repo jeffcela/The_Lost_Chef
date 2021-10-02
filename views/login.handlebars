@@ -1,3 +1,54 @@
 <div>
     <h1>Login</h1>
 </div>
+
+<div class="container">
+    <nav class="blue darken-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" class="brand-logo-nav"> <img class="nav-logo" src="image"> </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home </a></li>
+                <li><a href="/register">Sign Up </a></li>
+
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li>
+                    <a href="/"></a>Home
+                    <a href="/login"></a>Sign In
+                    <a href="/register"></a>Sign Up
+                </li>
+            </ul>
+
+            <ul id="slide-out" class="sidenav" id="#sidenav">
+                <li>
+                    <div class="user-view">
+                        <a href="/"><button class="btn">Home</button></a>
+                        <a href="/login"><button class="btn">Sign In</button></a>
+                        <a href="/register"><button class="btn">Sign Up</button></a>
+                </li>
+            </ul>
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+
+            <h1 class="header center white-text"> <img class="logo" src="/assets/images/additionalimgs/logo.png"></h1>
+
+            <form id="signin" name="signin" method="post" action="/adminSignin">
+                
+                <br>
+                <input class="text form-control mt-3" name="email" type="email" placeholder="Enter email" required />
+
+                <!-- <label for="password">Password</label> -->
+                <input name="password" type="password" class="form-control mt-3" id="InputPassword1"
+                    placeholder="Password" minlength="6" required />
+
+                <input class="btn mt-3" type="submit" value="Sign In" id="sign-in-button" />
+                <br>
+                <br>
+
+            </form>
+            <br>
+            <br>
+            <br>
