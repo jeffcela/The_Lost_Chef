@@ -1,5 +1,5 @@
-const router = require('express').router();
-const withAuth = require();
+const router = require('express').Router();
+// const withAuth = require();
 
 router.get('/', async (req,res) => {
     try {
