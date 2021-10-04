@@ -1,42 +1,41 @@
-<h1>header</h1>
 
 <nav class="transparent" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo"></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
+    <div class="nav-wrapper">
+      <a id="logo-container" href="/home" class="brand-logo"></a>
+      {{#if logged_in}}
+          {{!-- Standard view of menu logged in --}}
+          <ul class="right hide-on-med-and-down">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/userFridge">My Fridge</a></li>
+              <li><a href="/favoriteReceipes">Favorites</a></li>
+              {{!-- I am not sure were this will go --}}
+              <li><a href="/home">Logout</a></li>
+          </ul>
 
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
-      </div>
-    </nav>
-    
-<div id="index-banner" class="parallax-container">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <br /><br />
-          <img
-            class="responsive"
-            width="950"
-            src="/images/additionalimgs/Header.png"
-            alt=""
-          />
-          <div class="row center"></div>
-          <!-- <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div> -->
-          <br /><br />
-        </div>
-      </div>
-      <div class="parallax">
-        <img
-          src="/images/fullscreenbgs/homebg.png"
-          alt="Unsplashed background img 1"
-        />
-      </div>
+          {{!-- Mobile view of menu logged in --}}
+          <ul id="nav-mobile" class="sidenav">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/userFridge">My Fridge</a></li>
+              <li><a href="/favoriteReceipes">Favorites</a></li>
+              {{!-- I am not sure were this will go --}}
+              <li><a href="/home">Logout</a></li>       
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      {{else}}
+          {{!-- Standard view of menu logged out --}}
+          <ul class="right hide-on-med-and-down">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+          </ul>
+
+          {{!-- Mobile view of menu logged out --}}
+          <ul id="nav-mobile" class="sidenav">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      {{/if}}
     </div>
+</nav>
