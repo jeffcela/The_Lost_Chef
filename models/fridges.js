@@ -12,6 +12,7 @@ fridges.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true
         },
         fridge_name: {
             type: DataTypes.STRING,
