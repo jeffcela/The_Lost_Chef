@@ -10,13 +10,13 @@ fridges.belongsTo(users, {
 });
 
 //ingredient belongs to fridge_ingredient
-ingredients.belongsToMany(fridges, {
-    through: "fridge_ingredients",
+fridgeIngredients.hasOne(ingredients, {
+    // through: "fridge_ingredients",
     foreignKey: 'ingredients_id',
 })
 
-fridges.belongsToMany(ingredients,{
-    through: "fridge_ingredients",
+fridgeIngredients.hasOne(fridges,{
+    // through: "fridge_ingredients",
     foreignKey: 'fridge_id',
 })
 
