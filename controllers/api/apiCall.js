@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const axios = require('axios');
+const { fridgeIngredients } = require('../../models');
+const { ingredients } = require('../../models')
+
 require('dotenv').config();
 router.get('/get-recipe/:id', async (req, res) => {
     try {
