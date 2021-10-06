@@ -1,11 +1,11 @@
 
     [
         {
-            "fridge_fridge_id": 1,
-            "ingredient_ingredients_id": 2
+            "fridge_id": 1,
+            "ingredient_id": 2
         },
         {
-            "fridge_fridge_id": 2,
-            "ingredient_ingredients_id": 1
+            "fridge_id": 2,
+            "ingredient_id": 1
         }
     ]
