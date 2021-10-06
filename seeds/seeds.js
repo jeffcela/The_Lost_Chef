@@ -4,7 +4,7 @@ const userData = require('./user.json')
 const fridgeData = require('./fridges.json')
 const fridgeIngredientData = require('./fridge_ingredients.json')
 const seedData = async () => {
-    await sequelize.sync({ force: false })
+    await sequelize.sync({ force: true })
     // await users.create(userData)
     // await fridges.create(fridgeData)
     await fridgeIngredients.bulkCreate(fridgeIngredientData, { return: true })

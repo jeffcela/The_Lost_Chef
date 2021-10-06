@@ -4,7 +4,7 @@ const router = require('express').Router();
 router.get('/', async (req,res) => {
     try {
 
-        res.render('homepage', {
+        res.render('home', {
             logged_in: true,
         });
     } catch (err) {
