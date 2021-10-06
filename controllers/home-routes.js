@@ -12,6 +12,17 @@ router.get('/', async (req,res) => {
     }
 });
 
+router.get('/profile', async (req,res) => {
+    try {
+
+        res.render('profile', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.get('/build-my-recipes', async (req,res) => {
     try {
 
