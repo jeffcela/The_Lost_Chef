@@ -14,7 +14,7 @@ fridge_ingredients.init(
             primaryKey: true,
             autoIncrement: true
         },
-        fridge_id: {
+        fridge_fridge_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             // references: {
@@ -22,7 +22,7 @@ fridge_ingredients.init(
             //     key: 'fridge_id'
             // }
         },
-        ingredients_id: {
+        ingredient_ingredients_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             // references: {
