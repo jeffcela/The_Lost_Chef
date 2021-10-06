@@ -1,3 +1,17 @@
-<div>
-    <h1>User Fridge</h1>
+{{> header}}
+<div class="container">
+  <div class="row">
+      <div>
+          <h1>my fridge</h1>
+          <form action="#">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>{{> fridge-items}}</span>
+              </label>
+            </p>
+          </form>
+      </div>
+  </div>
 </div>
+{{> footer}}
