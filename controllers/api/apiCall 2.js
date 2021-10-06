@@ -1,8 +1,7 @@
 const router = require('express').Router();
-const axios = require('axios');
 const { fridge_ingredients } = require('../../models');
 const { ingredients } = require('../../models')
-
+const axios = require('axios');
 require('dotenv').config();
 router.get('/get-recipe/:id', async (req, res) => {
     try {
@@ -60,5 +59,5 @@ router.get('/get-recipe/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
-
+  
 module.exports = router;
