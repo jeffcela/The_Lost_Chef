@@ -15,7 +15,7 @@ router.get('/', async (req,res) => {
 router.get('/build-my-recipes', async (req,res) => {
     try {
 
-        res.render('buildMyRecipes', {
+        res.render('build-my-recipes', {
             logged_in: true,
         });
     } catch (err) {
@@ -26,7 +26,7 @@ router.get('/build-my-recipes', async (req,res) => {
 router.get('/favorite-recipes', async (req,res) => {
     try {
 
-        res.render('favoriteRecipes', {
+        res.render('favorite-recipes', {
             logged_in: true,
         });
     } catch (err) {
@@ -37,7 +37,7 @@ router.get('/favorite-recipes', async (req,res) => {
 router.get('/user-fridges', async (req,res) => {
     try {
 
-        res.render('userFridges', {
+        res.render('user-fridges', {
             logged_in: true,
         });
     } catch (err) {

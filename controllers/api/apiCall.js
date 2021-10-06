@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const axios = require('axios');
-const { fridgeIngredients } = require('../../models');
+const { fridge_ingredients } = require('../../models');
 const { ingredients } = require('../../models')
 
 require('dotenv').config();
@@ -20,7 +20,7 @@ router.get('/get-recipe/:id', async (req, res) => {
 
   router.post('/get-recipes', async (req, res) => {
     try {
-        const ingredientsData = await fridgeIngredients.findAll({
+        const ingredientsData = await fridge_ingredients.findAll({
             include: [
                 {
                   model: ingredients,
