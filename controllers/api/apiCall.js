@@ -36,22 +36,22 @@ router.get('/get-recipe/:id', async (req, res) => {
         }) 
 
         let strData = '' 
-        // ingredientsList.forEach((item, index)=> {
-        //     console.log(item)
-        //     if (index == 0) {
-        //         // strData = item.ingredient.ingredients_name + "," 
-        //     } else {
-        //         strData = strData + "+" + item.ingredient.ingredients_name + ","
-        //     }
-        //     })
+        ingredientsList.forEach((item, index)=> {
+            console.log(item)
+            if (index == 0) {
+                strData = item.ingredient.ingredients_name + "," 
+            } else {
+                strData = strData + "+" + item.ingredient.ingredients_name + ","
+            }
+            })
         // res.json(ingredient)
         console.log(strData);
       const response = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${strData}&number=10`,{
         headers: {'Content-Type': 'application/json'}
         // 716429
       })
-      res.json(ingredientsList)
-      // res.json(response.data);
+      // res.json(ingredientsList)
+      res.json(response.data);
     //   if (!ingredientsData) {
     //     res.status(404).json({ message: 'No ingredients found with this id!' });
     //     return;
