@@ -1,19 +1,20 @@
- @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 /* font-family: 'Bodoni Moda', serif;
 font-family: 'Poppins', sans-serif; */
 
 /* Coolors Exported Palette - https://coolors.co/e9bd67-5f8369-faf7f1-5c5f5f-b55008-edce87-ffffff-1e1e1e */
 
-:root
-/* CSS HEX */
---maximum-yellow-red: #e9bd67ff;
---viridian: #5f8369ff;
---floral-white: #faf7f1ff;
---davys-grey: #5c5f5fff;
---mahogany: #b55008ff;
---jasmine: #edce87ff;
---white: #ffffffff;
---eerie-black: #1e1e1eff;
+:root{
+  --maximum-yellow-red: #e9bd67ff;
+  --viridian: #5f8369ff;
+  --floral-white: #faf7f1ff;
+  --davys-grey: #5c5f5fff;
+  --mahogany: #b55008ff;
+  --jasmine: #edce87ff;
+  --white: #ffffffff;
+  --eerie-black: #1e1e1eff;
+}
+
 
 /* CSS HSL */
 --maximum-yellow-red: hsla(40, 75%, 66%, 1);
@@ -39,17 +40,43 @@ nav {
   background-color: ;
 }
 
+.row {
+  margin: 0px;
+}
+
 .parallax-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 750px;
+  margin: 0px;
 }
 
 .parallax-container img {
   height: 350px;
 }
 
+.responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .flex-container {
   margin: 0;
 width: 100%;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+.flex-container-body {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 nav ul a,
@@ -67,15 +94,21 @@ h1 {
   font-weight: 700;
   font-size: 108px;
   font-style: italic;
+  color: var(--mahogany);
+  margin: 0rem;
 }
 
 
 
 
 h5 {
-  line-height: 2rem;
+  line-height: 0rem;
   font-family: 'Poppins', sans-serif;
-  color: var(--davys-grey);
+  color: var(--eerie-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 0rem;
 }
 
 .sidenav-trigger {
@@ -83,7 +116,9 @@ h5 {
 }
 
 
-
+#headerlink {
+  max-width: 350px;
+}
 
 
 #about {
@@ -128,5 +163,17 @@ footer.page-footer {
 }
 
 
+.card-panel{
+background-color: rgba(255,255,255,0.5);
+height:300px;
+width: fit-content;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
 
-
+/* 
+.opacity {
+  background: #fff;
+opacity: .7;
+} */
