@@ -1,4 +1,11 @@
+
+[
 {
     "fridge_name": "fridge_one",
     "user_id": 1
+},
+{
+    "fridge_name": "fridge_two",
+    "user_id": 1
 }
+]

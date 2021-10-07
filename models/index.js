@@ -7,27 +7,32 @@ const ingredients = require('./ingredients');
 
 
 //fridges belongs to fridges_ingredient
-// fridges.belongsTo(users, {
-//     foreignKey: 'user_id',
-// });
+fridges.belongsTo(users, {
+    foreignKey: 'user_id',
+});
 
-// //ingredient belongs to fridge_ingredient
+//ingredient belongs to fridge_ingredient
 fridges.belongsToMany(ingredients, {
     through: fridge_ingredients,
-    constraints: false
-    // foreignKey: 'ingredients_id',
+    // foreignKey: "fridge_id",
+    constraints: false,
+    foreignKey: 'ingredients_id'
 })
 
 ingredients.belongsToMany(fridges,{
     through: fridge_ingredients,
-    constraints: false
-    // foreignKey: 'fridge_id',
+    // foreignKey: "ingredient_id",
+    constraints: false,
+    foreignKey: 'fridge_id'
 })
 
-// fridges.hasMany(fridge_ingredients)
-// fridge_ingredients.belongsTo(fridges)
-// ingredients.hasMany(fridge_ingredients)
-// fridge_ingredients.belongsTo(ingredients)
+fridges.hasMany(fridge_ingredients, {
+    foreignKey: "fridge_id",
+    constraints: false
+})
+fridge_ingredients.belongsTo(fridges)
+ingredients.hasMany(fridge_ingredients)
+fridge_ingredients.belongsTo(ingredients)
 
 //fridges belongs to fridges_ingredient
 // fridges.belongsTo(users, {
@@ -40,10 +45,11 @@ ingredients.belongsToMany(fridges,{
 //     foreignKey: 'ingredients_id',
 // })
 
-fridge_ingredients.hasOne(fridges,{
-    // through: "fridge_ingredients",
-    foreignKey: 'fridge_id',
-})
+// fridge_ingredients.hasOne(fridges,{
+//     // through: "fridge_ingredients",
+//     foreignKey: 'fridge_id',
+// })
+
 module.exports = {
     fridges,
     users,
