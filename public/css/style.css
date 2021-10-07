@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 /* font-family: 'Bodoni Moda', serif;
 font-family: 'Poppins', sans-serif; */
 
 /* Coolors Exported Palette - https://coolors.co/e9bd67-5f8369-faf7f1-5c5f5f-b55008-edce87-ffffff-1e1e1e */
 
-:root {
-  --maximum-yellow-red: #e9bd67ff;
-  --viridian: #5f8369ff;
-  --floral-white: #faf7f1ff;
-  --davys-grey: #5c5f5fff;
-  --mahogany: #b55008ff;
-  --jasmine: #edce87ff;
-  --white: #ffffffff;
-  --eerie-black: #1e1e1eff;
-}
+:root
+/* CSS HEX */
+--maximum-yellow-red: #e9bd67ff;
+--viridian: #5f8369ff;
+--floral-white: #faf7f1ff;
+--davys-grey: #5c5f5fff;
+--mahogany: #b55008ff;
+--jasmine: #edce87ff;
+--white: #ffffffff;
+--eerie-black: #1e1e1eff;
 
 /* CSS HSL */
 --maximum-yellow-red: hsla(40, 75%, 66%, 1);
@@ -39,43 +39,6 @@ nav {
   background-color: ;
 }
 
-.row {
-  margin: 0px;
-}
-
-.parallax-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 750px;
-  margin: 0px;
-}
-
-.parallax-container img {
-  height: 350px;
-}
-
-.responsive {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.flex-container {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.flex-container-body {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
 
 nav ul a,
 nav .brand-logo {
@@ -85,45 +48,51 @@ nav .brand-logo {
 p {
   line-height: 2rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.25rem;
 }
 
 h1 {
   font-family: 'Bodoni Moda', serif;
   font-weight: 700;
-  font-size:5vw;
+  font-size: 108px;
   font-style: italic;
-  color: var(--mahogany);
-  margin: 0rem;
 }
 
-h2 {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 700;
-  font-size: 2.5vw;
-  font-style: italic;
-  color: var(--mahogany);
-  margin: 0rem;
-}
 
 h5 {
-  line-height: 0rem;
+  line-height: 2rem;
   font-family: 'Poppins', sans-serif;
-  color: var(--eerie-black);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  margin: 0rem;
+  color: var(--davys-grey);
 }
 
 .sidenav-trigger {
   color: #26a69a;
 }
 
-#headerlink {
-  max-width: 350px;
+.parallax-container {
+  /* min-height: 380px; */
+  line-height: 0rem;
+  height: 850px;
+  display: flex;
+  /* flex-flow: column; */
+  align-items: center;
+  justify-content: center;
 }
+
+  .parallax-container .container {
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.883); */
+    color: rgba(181, 80, 8, 1);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: center;*/
+    
+  }
+
+
+
+
 
 #about {
   background-color: rgba(95, 131, 105, 1);
@@ -135,31 +104,24 @@ h5 {
   color: rgba(233, 189, 103, 1);
 }
 
-@media only screen and (max-width: 992px) {
+
+
+
+
+@media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
-    top: 0%;
+    top: 40%;
   }
   #index-banner .section {
-    top: 0%;
+    top: 10%;
   }
-  h1 {
-    font-size:15vw;
-    }
-    .flex-container {
-      max-width:100vw;
-    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
-
-  .h2 {
-  font-size:5vw;
-  }
-
 }
 
 .icon-block {
@@ -172,23 +134,3 @@ h5 {
 footer.page-footer {
   margin: 0;
 }
-
-.card-panel {
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 300px;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.5);
-  }
-
-
-/* 
-.opacity {
-  background: #fff;
-opacity: .7;
-} */
