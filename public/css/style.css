@@ -4,16 +4,16 @@ font-family: 'Poppins', sans-serif; */
 
 /* Coolors Exported Palette - https://coolors.co/e9bd67-5f8369-faf7f1-5c5f5f-b55008-edce87-ffffff-1e1e1e */
 
-:root
+:root {--maximum-yellow-red: #e9bd67ff;
+  --viridian: #5f8369ff;
+  --floral-white: #faf7f1ff;
+  --davys-grey: #5c5f5fff;
+  --mahogany: #b55008ff;
+  --jasmine: #edce87ff;
+  --white: #ffffffff;
+  --eerie-black: #1e1e1eff;
+  }
 /* CSS HEX */
---maximum-yellow-red: #e9bd67ff;
---viridian: #5f8369ff;
---floral-white: #faf7f1ff;
---davys-grey: #5c5f5fff;
---mahogany: #b55008ff;
---jasmine: #edce87ff;
---white: #ffffffff;
---eerie-black: #1e1e1eff;
 
 /* CSS HSL */
 --maximum-yellow-red: hsla(40, 75%, 66%, 1);
@@ -133,4 +133,8 @@ h5 {
 
 footer.page-footer {
   margin: 0;
+  background-color: var(--viridian);
 }
+
+
+
