@@ -24,6 +24,17 @@ router.get('/register', async (req,res) => {
     }
 });
 
+router.get('/login', async (req,res) => {
+    try {
+
+        res.render('login', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.get('/profile', async (req,res) => {
     try {
 
