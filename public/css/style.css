@@ -39,6 +39,18 @@ nav {
   background-color: ;
 }
 
+.parallax-container {
+  height: 750px;
+}
+
+.parallax-container img {
+  height: 350px;
+}
+
+.flex-container {
+  margin: 0;
+width: 100%;
+}
 
 nav ul a,
 nav .brand-logo {
@@ -69,28 +81,6 @@ h5 {
 .sidenav-trigger {
   color: #26a69a;
 }
-
-.parallax-container {
-  /* min-height: 380px; */
-  line-height: 0rem;
-  height: 850px;
-  display: flex;
-  /* flex-flow: column; */
-  align-items: center;
-  justify-content: center;
-}
-
-  .parallax-container .container {
-    width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.883); */
-    color: rgba(181, 80, 8, 1);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: center;*/
-    
-  }
 
 
 
@@ -136,3 +126,7 @@ h5 {
 footer.page-footer {
   margin: 0;
 }
+
+
+
+
