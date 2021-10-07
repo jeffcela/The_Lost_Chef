@@ -10,8 +10,7 @@ CREATE TABLE ingredients (
     ingredients_api_id  VARCHAR(255) NOT NULL
 );
 
--- LOAD DATA LOCAL INFILE '../seeds/top-1k-ingredients.csv' 
---  INTO TABLE ingredients 
---  FIELDS TERMINATED BY ',' 
---  IGNORE 1 ROWS 
+-- LOAD DATA LOCAL INFILE '/seeds/top-1k-ingredients.csv' INTO TABLE ingredients;
+--  FIELDS TERMINATED BY ',',
+--  IGNORE 1 ROWS,
 --  (ingredients_name, ingredients_api_id);
