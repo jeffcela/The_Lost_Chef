@@ -13,6 +13,17 @@ router.get('/', async (req,res) => {
     }
 });
 
+router.get('/register', async (req,res) => {
+    try {
+
+        res.render('register', {
+            logged_in: true,
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.get('/profile', async (req,res) => {
     try {
 

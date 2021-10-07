@@ -47,6 +47,28 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/', function (req, res) {
+    res.render('profile', {
+        user_name: [
+            {
+                recipeauthor: 'Recipe Author',
+                image: 'https://picsum.photos/500/500',
+                comments: [
+                    'This is the first comment',
+                    'This is the second comment',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec fermentum ligula. Sed vitae erat lectus.'
+                ]
+            }, 
+            {
+                author: 'Recipe Author',
+                image: 'https://picsum.photos/500/500?2',
+                comments: [
+                ]
+            }
+        ]
+    });
+});
+
 app.listen(3000, () => {
     console.log('The web server has started on port 3000');
 });
