@@ -19,39 +19,40 @@ router.get('/get-recipe/:id', async (req, res) => {
 
   router.post('/get-recipes', async (req, res) => {
     try {
-        const ingredientsData = await fridge_ingredients.findAll({
-            include: [
-                {
-                  model: ingredients,
-                  attributes: ['ingredients_name'],
-                },
-              ],
-            where: {
-              fridge_id: req.body.fridge_id,
-            },
-        });
-        console.log(ingredientsData)
-        const ingredientsList = ingredientsData.map((ingredient) => {
-            return ingredient.get({ plain: true })
-        }) 
+        // const ingredientsData = await fridge_ingredients.findAll({
+        //     include: [
+        //         {
+        //           model: ingredients,
+        //           attributes: ['ingredients_name'],
+        //         },
+        //       ],
+        //     where: {
+        //       fridge_id: req.body.fridge_id,
+        //     },
+        // });
+        // console.log(ingredientsData)
+        // const ingredientsList = ingredientsData.map((ingredient) => {
+        //     return ingredient.get({ plain: true })
+        // }) 
 
-        let strData = '' 
+        // let strData = '' 
         // ingredientsList.forEach((item, index)=> {
         //     console.log(item)
         //     if (index == 0) {
-        //         // strData = item.ingredient.ingredients_name + "," 
+        //         strData = item.ingredient.ingredients_name + "," 
         //     } else {
         //         strData = strData + "+" + item.ingredient.ingredients_name + ","
         //     }
         //     })
-        // res.json(ingredient)
-        console.log(strData);
-      const response = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${strData}&number=10`,{
+        // // res.json(ingredient)
+        // console.log(strData);
+        console.log('ingredients',req.body.ingredients)
+      const response = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${req.body.ingredients}&number=10`,{
         headers: {'Content-Type': 'application/json'}
         // 716429
       })
-      res.json(ingredientsList)
-      // res.json(response.data);
+      // res.json(ingredientsList)
+      res.json(response.data);
     //   if (!ingredientsData) {
     //     res.status(404).json({ message: 'No ingredients found with this id!' });
     //     return;
