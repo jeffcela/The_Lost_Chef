@@ -1,7 +1,9 @@
-// const express = require('express');
-// const exphbs = require('express-handlebars');
+const express = require('express');
+const exphbs = require('express-handlebars');
 
-// const app = express();
+const app = express();
+
+app.use(express.static('public/images')); 
 
 // app.engine('hbs', exphbs({
 //     defaultLayout: 'main',
