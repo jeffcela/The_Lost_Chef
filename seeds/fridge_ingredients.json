@@ -2,10 +2,20 @@
     [
         {
             "fridge_id": 1,
-            "ingredient_id": 2
+            "ingredients_id": 3,
+            "fridgeFridgeId": 1,
+            "ingredientIngredientsId": 3
         },
         {
             "fridge_id": 2,
-            "ingredient_id": 1
+            "ingredients_id": 4,
+            "fridgeFridgeId": 2,
+            "ingredientIngredientsId": 4
+        },
+        {
+            "fridge_id": 2,
+            "ingredients_id": 3,
+            "fridgeFridgeId": 2,
+            "ingredientIngredientsId": 3
         }
     ]

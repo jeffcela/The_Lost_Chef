@@ -17,18 +17,18 @@ fridge_ingredients.init(
         fridge_id: {
             type: DataTypes.INTEGER,
             // allowNull: false,
-            // references: {
-            //     model: 'fridges',
-            //     key: 'fridge_id'
-            // }
+            references: {
+                model: 'fridges',
+                key: 'fridge_id'
+            }
         },
-        ingredient_id: {
+        ingredients_id: {
             type: DataTypes.INTEGER,
             // allowNull: false,
-            // references: {
-            //     model: 'ingredient',
-            //     key: 'api_id'
-            // }
+            references: {
+                model: 'ingredients',
+                key: 'ingredients_id'
+            }
         },
     },
     {
