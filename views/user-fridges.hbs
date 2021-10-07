@@ -3,11 +3,17 @@
   <div class="row">
       <div>
           <h1>my fridge</h1>
-          <form action="#">
-              {{fridge-items}}
+          
+          <form action="#" id="ingredient-form">
+          {{#each ingredientsListItems}}
+           {{> fridge-items}}
+           {{/each}}
+
           </form>
+          <button id="get-recipes">get-recipes</button>
       </div>
   </div>
+  <div id="recipes"></div>
 </div>
 
 <div class="container">
