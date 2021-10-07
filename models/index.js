@@ -4,6 +4,8 @@ const fridges = require('./fridges');
 const fridge_ingredients = require('./fridge_ingredients');
 const ingredients = require('./ingredients');
 
+
+
 //fridges belongs to fridges_ingredient
 // fridges.belongsTo(users, {
 //     foreignKey: 'user_id',
