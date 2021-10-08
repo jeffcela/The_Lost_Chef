@@ -5,14 +5,27 @@
         <div class="col s12">
           <h1 class="header center black-text">register</h1>
           <h3 class="center black-text">to gain access</h3>
-          <form id="signin" name="signin" method="post" action="/adminSignin">
-            <input class="text form-control mt-3" name="name" type="text" placeholder="Enter first and last name" required />
-            <input class="text form-control mt-3" name="email" type="email" placeholder="Enter email" required />
-            <input name="password" type="password" class="form-control mt-3" id="InputPassword1" placeholder="Password" minlength="6" required />
-            <input class="btn mt-3" type="submit" value="Sign In" id="sign-in-button" />
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="name-signup">name:</label>
+              <input class="form-input" type="text" id="name-signup" placeholder="first and last name"/>
+            </div>
+            <div class="form-group">
+              <label for="email-signup">email:</label>
+              <input class="form-input" type="text" id="email-signup" placeholder="email@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="password-signup">password:</label>
+              <input class="form-input" type="password" id="password-signup" placeholder="At least 6 digits" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">signup</button>
+            </div>
           </form>
         </div>
     </div>
   </div>
+
+  <script src="./js/register.js"></script>
 </section>
 {{> footer}}
