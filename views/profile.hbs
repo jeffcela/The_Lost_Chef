@@ -1,3 +1,26 @@
-<div>
-    <h1>Profile</h1>
-</div>
+{{> header}}
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center">Welcome</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">{{user_name}}</h5>
+      </div>
+      <div class="row">
+      <div class="col s6 center">
+        <a href="/views/build-my-recipes.hbs" id="download-button" class="btn-large waves-effect waves-light orange">Your Fridge</a>
+      </div>
+      <div class="col s6 center">
+        <a href="/views/user-fridges.hbs" id="download-button" class="btn-large waves-effect waves-light orange">Recipes</a>
+      </div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+
+  
+{{> footer}}

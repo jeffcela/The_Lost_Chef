@@ -1,11 +1,26 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 const {fridges,users, ingredients,fridge_ingredients} = require('./models');
 const controllers = require("./controllers");
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+      db: sequelize
+    })
+  };
+  
+  app.use(session(sess));
 
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
