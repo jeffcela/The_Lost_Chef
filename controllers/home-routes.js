@@ -5,7 +5,7 @@ router.get('/', async (req,res) => {
     try {
 
         res.render('home', {
-            logged_in: true,
+            logged_in: false,
         });
     } catch (err) {
         res.status(400).json(err);

@@ -2,8 +2,13 @@
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection.js');
+const bcrypt = require('bcrypt');
 
-class users extends Model {}
+class users extends Model {
+    checkPassword(loginPw) {
+      return bcrypt.compareSync(loginPw, this.password);
+    }
+  }
 
 users.init(
     {
@@ -14,6 +19,10 @@ users.init(
             primaryKey: true,
             autoIncrement: true
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -22,13 +31,23 @@ users.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                len: [6],
+              },
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        
     },
     {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+              newUserData.password = await bcrypt.hash(newUserData.password, 10);
+              return newUserData;
+            },
+            beforeUpdate: async (updatedUserData) => {
+              updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+              return updatedUserData;
+            },
+          },
          // Link to database connection
         sequelize,
         // Set to false to remove `created_at` and `updated_at` fields
