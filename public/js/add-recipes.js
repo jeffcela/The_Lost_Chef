@@ -50,7 +50,7 @@ async function handleGetRecipe(){
             // for (var i = 0; i < ingredientsList.length; i++){
             //     document.createElement('li')
             // }
-
+            
             cardIngredientsLiList.append(usedIngredient)
             cardIngredientsLiList.append(ingredientsList)
             container.appendChild(cardIngredientsUlList)
