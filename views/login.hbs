@@ -1,17 +1,18 @@
 {{> header}}
-<section>
-  <div class="container">
-    <div class="row">
-        <div class="col s12">
-          <h1 class="header center black-text">login</h1>
-          <h3 class="center black-text"> or register an account</h3>
-          <form id="signin" name="signin" method="post" action="/adminSignin">
-            <input class="text form-control mt-3" name="email" type="email" placeholder="Enter email" required />
-            <input name="password" type="password" class="form-control mt-3" id="InputPassword1" placeholder="Password" minlength="6" required />
-            <input class="btn mt-3" type="submit" value="Sign In" id="sign-in-button" />
-          </form>
-        </div>
-    </div>
+<div class="container">
+  <div class="row">
+      <div class="col s6">
+        <h1 class="header center black-text">login</h1>
+        <h3 class="center black-text"> or register an account</h3>
+        <form id="signin" name="signin" method="post" action="/adminSignin">
+          <input class="text form-control mt-3" name="email" type="email" placeholder="Enter email" required />
+          <input name="password" type="password" class="form-control mt-3" id="InputPassword1" placeholder="Password" minlength="6" required />
+          <input class="btn mt-3" type="submit" value="Sign In" id="sign-in-button" />
+        </form>
+      </div>
+      <div class="col s6">
+        <img src="/images/backgrounds/loginpage-bg.png">
+      </div>
   </div>
-</section>
+</div>
 {{> footer}}
