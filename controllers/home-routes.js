@@ -1,5 +1,6 @@
 const router = require('express').Router();
 // const withAuth = require();
+const {fridge_ingredients, ingredients, fridges} = require('../models');
 
 router.get('/', async (req,res) => {
     try {
@@ -47,12 +48,32 @@ router.get('/favorite-recipes', async (req,res) => {
 
 router.get('/user-fridges', async (req,res) => {
     try {
-
+        const fridge = await fridges.findOne({
+            
+        })
+        const ingredientsData = await fridge_ingredients.findAll({
+            include: [
+                {
+                  model: ingredients,
+                  attributes: ['ingredients_name'],
+                },
+              ],
+            where: {
+              fridge_id: fridge.get({plain: true}).fridge_id
+            },
+        });
+        console.log(ingredientsData)
+        const ingredientsListItems = ingredientsData.map((ingredient) => {
+            return ingredient.get({ plain: true })
+        }) 
         res.render('user-fridges', {
             logged_in: true,
+            ingredientsListItems
         });
     } catch (err) {
+        console.log(err)
         res.status(400).json(err);
+        
     }
 });
 
