@@ -81,7 +81,7 @@ Send a message to Sebastian Campos
             cardRow.classList.add('row')
             const cardCol = document.createElement('div')
             cardCol.classList.add('col', 'm3')
-
+            // const lineBreak = document.createElement('br')
           const cardContainer = document.createElement('div')
           cardContainer.classList.add('card')
           const imageContainer = document.createElement('div')
@@ -94,11 +94,23 @@ Send a message to Sebastian Campos
           cardTitle.append(recipeTitle)
           const cardContent = document.createElement('div')
           cardContent.classList.add('card-content')
+          const ingredientsList = item.missedIngredients[0].originalString
           const cardIngredientsUlList = document.createElement('ul');
           const cardIngredientsLiList = document.createElement('li')
-          const ingredientsList = item.missedIngredients[0].originalString
+        //  for(var i = 0; i < json.length;  i++){
+        //      console.log(json[i].missedIngredients)
+        //      var ing = missedIngredients
+        //     }
+        
+        // for(var j = 0; j<= missedIngredients.length; j++){
+        //     console.log(missedIngredients[j].or)
+        // }
           cardIngredientsUlList.appendChild(cardIngredientsLiList)
-          const usedIngredient = item.usedIngredients[0].name
+          const usedIngredient = item.usedIngredients[0].originalString
+        //     for (var i = 0; i <= ingredientsList.length; i++){
+        //        document.createElement('li')
+        //     }
+          
           cardRow.appendChild(cardCol)
           cardCol.appendChild(cardContainer)
           cardContainer.appendChild(imageContainer)
@@ -106,8 +118,9 @@ Send a message to Sebastian Campos
           imageContainer.appendChild(cardTitle)
           cardContainer.appendChild(cardContent)
           cardContent.appendChild(cardIngredientsUlList)
+        //   cardContent.appendChild(lineBreak)
           cardIngredientsLiList.append(usedIngredient)
-          cardIngredientsLiList.append(ingredientsList)
+        cardIngredientsUlList.append(ingredientsList)
           recipesEle.appendChild(cardRow);
 >>>>>>> main
 

@@ -6,7 +6,7 @@ require('dotenv').config();
 router.get('/get-recipe/:id', async (req, res) => {
     try {
     const id = req.params.id;
-      const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.API_KEY}&includeNutrition=true.`,{
+      const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.API_KEY}&includeInstruction=true.`,{
         headers: {'Content-Type': 'application/json'}
         // 716429
       })
