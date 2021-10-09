@@ -30,6 +30,7 @@ async function handleGetRecipe(){
         console.log('json', json)
         const recipesEle = document.querySelector('#recipes')
         json.forEach((item) => {
+<<<<<<< HEAD
             const cardContainer = document.createElement(‘div’)
             cardContainer.classList.add(‘card’)
             
@@ -75,6 +76,40 @@ Send a message to Sebastian Campos
 
 
 
+=======
+            const cardRow = document.createElement('div')
+            cardRow.classList.add('row')
+            const cardCol = document.createElement('div')
+            cardCol.classList.add('col', 'm3')
+
+          const cardContainer = document.createElement('div')
+          cardContainer.classList.add('card')
+          const imageContainer = document.createElement('div')
+          cardContainer.classList.add('card-image')
+          const cardImage = document.createElement('img')
+          cardImage.src = item.image
+          const cardTitle = document.createElement('span');
+          cardTitle.classList.add('card-title')
+          const recipeTitle = item.title
+          cardTitle.append(recipeTitle)
+          const cardContent = document.createElement('div')
+          cardContent.classList.add('card-content')
+          const cardIngredientsUlList = document.createElement('ul');
+          const cardIngredientsLiList = document.createElement('li')
+          const ingredientsList = item.missedIngredients[0].originalString
+          cardIngredientsUlList.appendChild(cardIngredientsLiList)
+          const usedIngredient = item.usedIngredients[0].name
+          cardRow.appendChild(cardCol)
+          cardCol.appendChild(cardContainer)
+          cardContainer.appendChild(imageContainer)
+          imageContainer.appendChild(cardImage)
+          imageContainer.appendChild(cardTitle)
+          cardContainer.appendChild(cardContent)
+          cardContent.appendChild(cardIngredientsUlList)
+          cardIngredientsLiList.append(usedIngredient)
+          cardIngredientsLiList.append(ingredientsList)
+          recipesEle.appendChild(cardRow);
+>>>>>>> main
 
         })
 }
