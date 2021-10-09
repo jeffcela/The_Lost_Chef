@@ -30,6 +30,53 @@ async function handleGetRecipe(){
         console.log('json', json)
         const recipesEle = document.querySelector('#recipes')
         json.forEach((item) => {
+<<<<<<< HEAD
+            const cardContainer = document.createElement(‘div’)
+            cardContainer.classList.add(‘card’)
+            
+            
+            
+            const cardImage = document.createElement(‘img’)
+            cardImage.src = item.image
+            const cardTitle = document.createElement(‘span’);
+            cardTitle.classList.add(‘card-title’)
+            const recipeTitle = item.title
+            cardTitle.append(recipeTitle)
+            const cardContent = document.createElement(‘div’)
+            cardContent.classList.add(‘card-content’)
+            const cardIngredientsUlList = document.createElement(‘ul’);
+            const cardIngredientsLiList = document.createElement(‘li’)
+            const ingredientsList = item.missedIngredients[0].originalString
+            cardIngredientsUlList.appendChild(cardIngredientsLiList)
+            const usedIngredient = item.usedIngredients[0].name
+            // for (var i = 0; i < ingredientsList.length; i++){
+            //     document.createElement(‘li’)
+            // }
+            cardContent.append(cardIngredientsUlList)
+            cardIngredientsLiList.append(usedIngredient)
+            cardIngredientsLiList.append(ingredientsList)
+            container.appendChild(cardIngredientsUlList)
+            container.appendChild(cardTitle);
+            container.appendChild(imageContainer);
+            container.appendChild(cardContent)
+            cardTitle.append(cardImage);
+            imageContainer.appendChild(cardImage);
+            recipesEle.appendChild(container);
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+
+
+
+Send a message to Sebastian Campos
+
+
+
+=======
             const cardRow = document.createElement('div')
             cardRow.classList.add('row')
             const cardCol = document.createElement('div')
@@ -75,6 +122,7 @@ async function handleGetRecipe(){
           cardIngredientsLiList.append(usedIngredient)
         cardIngredientsUlList.append(ingredientsList)
           recipesEle.appendChild(cardRow);
+>>>>>>> main
 
         })
 }
