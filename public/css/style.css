@@ -92,8 +92,6 @@ h5 {
 
 
 
-
-
 #about {
   background-color: rgba(95, 131, 105, 1);
   color: rgba(233, 189, 103, 1);
@@ -104,9 +102,32 @@ h5 {
   color: rgba(233, 189, 103, 1);
 }
 
+.img-recipeSizeCard {
+  width: 200px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+}
 
+.recipeTitle-style {
+  margin: 10px 10px
+}
 
+a {
+  color: black;
+}
+a:hover {
+  color: white;
+}
 
+button:focus {
+  background-color: #ced4da;
+  color: black;
+}
+
+button:hover {
+  background-color: #5f8369ff;
+  color: white;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -132,9 +153,15 @@ h5 {
 }
 
 footer.page-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   margin: 0;
   background-color: var(--viridian);
 }
+
+
 
 
 
